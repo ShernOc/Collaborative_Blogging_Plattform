@@ -1,6 +1,6 @@
 from flask_migrate import Migrate
 from flask import Flask, jsonify
-from models import db
+from backend.models import db
 from flask_jwt_extended import JWTManager
 from flask_mail import Mail,Message
 from flask_cors import CORS
