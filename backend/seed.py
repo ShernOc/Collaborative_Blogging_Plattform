@@ -3,7 +3,7 @@ from faker import Faker
 from faker import Faker
 from models import db, User, Blog,Editors,Comment, db
 
-from app import app 
+from backend.s import app 
 #Next is to add the dates
 # Commented out the Dates will be updated in the next work. 
 
