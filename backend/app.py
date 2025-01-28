@@ -4,6 +4,7 @@ from models import db
 from flask_jwt_extended import JWTManager
 from flask_mail import Mail,Message
 from flask_cors import CORS
+import os
 
 
 #create a flask class 
@@ -75,7 +76,8 @@ def index():
 
 #run the app.py 
 if __name__ == '__main__':
-    app.run(debug=True, port= 5555)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
 
 
 
