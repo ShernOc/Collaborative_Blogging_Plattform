@@ -3,14 +3,13 @@ from flask import Flask, jsonify
 from models import db
 from flask_jwt_extended import JWTManager
 from flask_mail import Mail,Message
-# from flask_cors import CORS
-
+from flask_cors import CORS
 
 
 #create a flask class 
 app = Flask(__name__)
 
-# CORS(app)
+CORS(app)
 
 # #create a migration. config parameters
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
@@ -31,7 +30,7 @@ db.init_app(app)
 
 @app.route('/')
 def index(): 
-    return ("<h1> Collaborative Blogging Platform </h1>")
+    return jsonify ({"Success " :"Collaborative Blogging Platform"})
 
 # #Authentication / jw_t 
 # app.config["JWT_SECRET_KEY"] = "Sherlyne-23456"  # Change this!

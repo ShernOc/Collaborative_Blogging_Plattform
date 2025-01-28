@@ -106,9 +106,9 @@ def comment_data():
             print("An error occurred:", e)
             db.session.rollback()
 
-if __name__ == "__main__":
-    # # user_data()
-    # blog_data()
-    # # editor_data()
-    # # comment_data()
+# if __name__ == "__main__":
+#     # # user_data()
+#     # blog_data()
+#     # # editor_data()
+#     # # comment_data()
     
