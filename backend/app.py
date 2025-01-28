@@ -2,11 +2,15 @@ from flask_migrate import Migrate
 from flask import Flask, jsonify
 from models import db
 from flask_jwt_extended import JWTManager
-from flask_mail import Mail,Message 
+from flask_mail import Mail,Message
+# from flask_cors import CORS
+
 
 
 #create a flask class 
 app = Flask(__name__)
+
+# CORS(app)
 
 # #create a migration. config parameters
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
@@ -24,7 +28,6 @@ db.init_app(app)
 # app.register_blueprint(feed_bp)
 # app.register_blueprint(staff_bp)
 # app.register_blueprint(auth_bp)
-
 
 @app.route('/')
 def index(): 
