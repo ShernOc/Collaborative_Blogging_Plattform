@@ -9,6 +9,7 @@ from app import app
 
 #initialize
 fake = Faker()
+#Default numbers of fake data = 15 
 roles = ["editor", "viewer"]
 users = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 blogs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
@@ -46,7 +47,7 @@ def blog_data():
                     blog=Blog(
                     title=fake.sentence(nb_words=5),       
                     content=fake.text(max_nb_chars=50),
-                    user_id=fake.random_element(users).id,
+                    user_id=fake.random_element(users),
                     # date=fake.date_time_this_year().strftime("%d/%m/%Y"),
                     is_published=fake.boolean()
                 )
@@ -106,8 +107,8 @@ def comment_data():
             db.session.rollback()
 
 if __name__ == "__main__":
-    user_data()
-    blog_data()
-    editor_data()
-    comment_data()
+    # # user_data()
+    # blog_data()
+    # # editor_data()
+    # # comment_data()
     

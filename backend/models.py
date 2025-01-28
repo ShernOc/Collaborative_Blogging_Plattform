@@ -12,6 +12,8 @@ ROLE_ENUM = ('editor', 'reviewer')
 # A user can write many blogs
 #A user can also comment on the blog
 
+#Next installation be able to add the Dates. 
+
 #User  Table 
 class User(db.Model):
     __tablename__ = "users"
